@@ -3,9 +3,8 @@ require_once("config.php");
 
 use classes\factory\DataBaseFactory as Factory;
 
-// mysql database cnnection
-//$driver = Factory::MYSQL;
 $driver = "MYSQL";
+//$driver = Factory::MYSQL;
 $dbConfig['host'] = 'localhost';
 $dbConfig['username'] = "root";
 $dbConfig['password'] = '';
@@ -16,5 +15,9 @@ echo var_dump($dbConfig);
 $mysql =  Factory::create($dbConfig, $driver);
 $conn = $mysql->getConnection();
 
-echo $conn;
+echo "conectou na base <br>";
+
+$mysql->closeConnection();
+
+echo "encerrou conexão <br>";
  ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace factory;
+namespace classes\factory;
 
 use classes\MySql;
 
