@@ -17,7 +17,7 @@ class MySql extends PDO implements BancoDados
 
 		$username	= $dbConfig['username'];
 		$db 		= $dbConfig['database'];
-		$password 	= base64_decode(base64_decode($dbConfig['password']));
+		$password 	= $dbConfig['password'])
 		$host		= $dbConfig['host'];
 		$token 		= $dbConfig['token'];
 
